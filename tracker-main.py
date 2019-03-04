@@ -1,9 +1,10 @@
+from os import environ
 import unicodecsv as csv
 import plotly.graph_objs as go
 import plotly
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 
-plotly.tools.set_credentials_file(username='RumblingHacked', api_key='iWfwPUu7E8YcyIvahwuQ')
+plotly.tools.set_credentials_file(username='RumblingHacked', api_key= environ.get('PLOTLY_KEY'))
 
 total_area_codes = 346
 completed_list = []
